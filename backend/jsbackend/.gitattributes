@@ -1,0 +1,7 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Force specific line endings
+*.js text eol=lf
+*.json text eol=lf
+*.env text eol=lf
