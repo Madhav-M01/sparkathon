@@ -27,7 +27,7 @@ app = FastAPI(title="Walmart Recommendation System", version="1.1.0")
 # In production, specify exact origins for security.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5176"], # WARNING: For production, change to specific origins, e.g., ["http://localhost:3000"]
+    allow_origins=["*"], # WARNING: For production, change to specific origins, e.g., ["http://localhost:3000"]
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
