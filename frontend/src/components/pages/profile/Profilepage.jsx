@@ -173,7 +173,7 @@ const ProfilePage = () => {
       const token = localStorage.getItem('token');
       if (token) {
         try {
-          const res = await axios.get('http://localhost:5000/users/me', {
+          const res = await axios.get('https://sparkathon-gfwo.onrender.com/users/me', {
             headers: { Authorization: token }
           });
           setUser(res.data);
@@ -191,7 +191,7 @@ const ProfilePage = () => {
     e.preventDefault();
     setAuthError('');
     try {
-      const res = await axios.post('http://localhost:5000/auth/login', {
+      const res = await axios.post('https://sparkathon-gfwo.onrender.com/auth/login', {
         email,
         password
       });
@@ -206,7 +206,7 @@ const ProfilePage = () => {
     e.preventDefault();
     setAuthError('');
     try {
-      const res = await axios.post('http://localhost:5000/auth/register', {
+      const res = await axios.post('https://sparkathon-gfwo.onrender.com/auth/register', {
         name,
         email,
         password
@@ -242,7 +242,7 @@ const ProfilePage = () => {
     setUploading(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post('http://localhost:5000/users/avatar', formData, {
+      const res = await axios.post('https://sparkathon-gfwo.onrender.com/users/avatar', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: token,
@@ -259,7 +259,7 @@ const ProfilePage = () => {
   const handleSettingSave = async (data) => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.put('http://localhost:5000/users/me', data, {
+      const res = await axios.put('https://sparkathon-gfwo.onrender.com/users/me', data, {
         headers: { Authorization: token }
       });
       setUser(res.data);
