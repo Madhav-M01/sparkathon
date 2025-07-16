@@ -24,7 +24,7 @@ const FashionRecommendationSystem = () => {
   const recognitionRef = useRef(null);
   const messagesEndRef = useRef(null);
 
-  const API_BASE_URL = 'http://127.0.0.1:8000'; // Ensure this matches your backend's address
+  const API_BASE_URL = 'https://sparkathon-1-brxa.onrender.com'; // Ensure this matches your backend's address
 
   // --- Effects ---
   useEffect(() => {
